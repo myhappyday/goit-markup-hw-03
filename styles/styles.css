@@ -79,6 +79,7 @@ img {
 /* -------------------- Header styles --------------------*/
 .page-header {
   padding-left: 215px;
+  border: 1px solid #ececec;
 }
 
 .main-nav {
@@ -338,7 +339,19 @@ address {
 
 /* -------------------- Portfolio styles --------------------*/
 
+.portfolio {
+  padding: 94px 215px;
+  text-align: center;
+}
+
+.portfolio-btn-list {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .portfolio-btn {
+  margin-bottom: 50px;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -347,12 +360,37 @@ address {
   color: var(--primary-text-color);
   cursor: pointer;
 }
+
 .portfolio-btn:hover,
 .portfolio-btn:focus {
   color: var(--primary-white-logo-color);
   background-color: var(--accent-color);
 }
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-item {
+  width: calc((100% - 60px) / 3);
+  border: 1px solid #eeeeee;
+}
+
+.portfolio-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.portfolio-item:nth-child(3n + 3) {
+  margin-right: 0;
+}
+
+.portfolio-item:nth-child(n + 4) {
+  margin-top: 20px;
+}
+
 .portfolio-item-title {
+  margin-top: 20px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -360,6 +398,7 @@ address {
   color: var(--primary-text-color);
 }
 .portfolio-item-text {
+  margin-top: 4px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
